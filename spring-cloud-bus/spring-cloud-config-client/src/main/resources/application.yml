@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  # shouldn't using config
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  cloud:
+    bus:
+      trace:
+        enable: true
+#  main:
+#    web-environment: false
