@@ -13,9 +13,9 @@ import org.springframework.scheduling.support.CronTrigger;
 
 import com.tnd.schedule.ScheduleTask;
 
-@Configuration
+//@Configuration
 //@RefreshScope
-@EnableScheduling
+//@EnableScheduling
 public class SchedulingConfig implements SchedulingConfigurer {
 
     @Autowired
@@ -27,13 +27,20 @@ public class SchedulingConfig implements SchedulingConfigurer {
     /** don't working because @RefreshScope effect to Bean **/
 //    @Value("${cron.exp}")
 //    private String cron;
+    
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
 
         ScheduleTask task = context.getBean(ScheduleTask.class);
 
         taskRegistrar.addTriggerTask(
-                () -> task.doTask(),
+                () -> {
+                    try {
+                        task.doTask();
+                    } catch (InterruptedException e) {
+
+                    }
+                },
                 triggerContext -> {
 //                        String expression = task.getCron();
 //                        CronTrigger trigger = new CronTrigger(expression);

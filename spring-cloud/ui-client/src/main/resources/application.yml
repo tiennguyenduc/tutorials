@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: ui-client
+
+server:
+  port: 8080
+  context-path: /ui
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+#    sso:
+#      loginPath: /login
+    client:
+      clientId: SampleClientId
+      clientSecret: secret
+      accessTokenUri: http://localhost:8081/auth/oauth/token
+      userAuthorizationUri: http://localhost:8081/auth/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8081/auth/user/me

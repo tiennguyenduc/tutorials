@@ -5,11 +5,9 @@ spring:
     username: guest
     password: guest
   # shouldn't using config
-  jackson:
-    property-naming-strategy: SNAKE_CASE
+#  jackson:
+#    property-naming-strategy: SNAKE_CASE
   cloud:
     bus:
       trace:
         enable: true
-#  main:
-#    web-environment: false

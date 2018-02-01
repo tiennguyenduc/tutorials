@@ -3,7 +3,7 @@
  * LINE Corporation PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 
-package com.tnd.config;
+package com.tnd.config.customized.mapping;
 
 import java.util.Arrays;
 import java.util.HashMap;

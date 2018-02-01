@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: UTC
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+    default-property-inclusion: NON_NULL
+
+
+tnd:
+  rabbitmq:
+    queue: tnd.queue
+    exchange: tnd.exchange
+    routingkey: tnd.routingkey
+

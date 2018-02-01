@@ -1,4 +1,4 @@
-package com.tnd.config;
+package com.tnd.config.customized.bus;
 
 import java.util.ArrayList;
 import java.util.Arrays;

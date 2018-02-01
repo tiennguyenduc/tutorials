@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file:///Users/tiennd1/Desktop/config-repo
+          addLabelLocations: false
+    stream:
+      bindings:
+        springCloudBusInput:
+          group: config-server
+

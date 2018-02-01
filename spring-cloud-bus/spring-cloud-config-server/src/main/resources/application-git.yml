@@ -1,0 +1,65 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/Desktop/config-repo
+#          spring cloud config using JGit to clone git and JGit only using ssh-rsa on ~/.ssh/known_hosts
+#          ssh-keyscan [-p port] [hostname] >> ~/.ssh/known_hosts
+#          uri: git@github.com:tiennguyenduc/tutorials-config.git
+#          uri: git@git-dev.linecorp.com:LineBotContent/global-weather-bot-config.git
+#          cloneOnStart: true
+#          using ssh key on properties file
+#          ignoreLocalSshSettings: true
+#          privateKey: |
+#                       -----BEGIN RSA PRIVATE KEY-----
+#                       MIIJKQIBAAKCAgEAqnCwJWZYzI2iIs2FQI4uQPdo9yBRkINOVVOh7ICiomMKkzY9
+#                       KknCvefTMfWoLYlRMfGpqOtDfwZoEjjrkhkGjGDfUwiITddbkUyhvlzzsszODqE0
+#                       nKemDD2fkansSMpbVrToRYyCfc2O9eZ8aWXptvgC3X14WT+rPMHEnomB5yOKomnt
+#                       2fkIZm721j2r7/AGmzvu7B/jspO2Kkk1Ti/0RQIxNluYeA4LZ7z/tyWVNbAw4P2v
+#                       i52831Hyry1EzyzXz9YRD+vRfMXli4wAOTOTgJH9Xce7KncQonbtnlGw0qWJ6BwJ
+#                       acudz8Fjai6rHKiFsA7t2Qv/Yhd/pjnB/oSsg8hJvRFrTxPCzZgJY5g8h83Zzepp
+#                       /irkrjUQzzyTaKhw7nGCkoTZ4ilryKxgedpYvR7wsmUodLCO4s3RAuTAc5pJYlF/
+#                       LGtxRu4IGStDVLxAkH6tAXxNuxB8ZS6891Vs6NnqAEWjxC54FRPWSwMCVRPTITIK
+#                       fmWUTfpIfl35W9ahEDDtT0F4+8umFBCjHeVWvtqtMccDWyz6Rv/7bQ7TJnzd174A
+#                       sEwH08f1UTyCfRa/UVxpFFi7x0eriSmlV3hn7dyWc2kyFdR3aYiN/GKwLiWnwX1T
+#                       +0SIPOQ8ZojFiXcOTBSdMEKoXls2Vm/t11lp63795i2rJpcHO5Z3Jz+yhOECAwEA
+#                       AQKCAgBJKX4zT6+mftWuYtJkV6P7NzjTfAgHJJYngnLrdnxZgHI1pv6yfF8f7bd2
+#                       pqC+i0dTTQ0q+XJLwJBD4jMcz6lD8QFsPyljYKJpyJ9Ve8kQY2HAXeqbpEtezcUF
+#                       Xg+TX2m92oIp+Jq7LdXEMGAPTjP42pVARm+2v+Hdfr/L3fLpKRSFizsSahf1AITs
+#                       iiSYJkxvrlZs/XNcYJO9qxc6rNMKHFrLnp3gSwcSTMrn7zYRicQxkDQelmNQ6Xhn
+#                       QeNbm0A4cwd38h5GlRxnvn0KEN2sPv6nluj83YdCdhKh9ycUBQMho4dW5pSjbbwj
+#                       BE1nS9+3J3FpzgCeNsAQtpJTktgKNjjHd3CuuVQ+tzri/iIjRPmnj/+BDBriP6DV
+#                       MMclgkoiFKPVWWGbPMFtwbaHaP1kSz2LnJ+Hm7TE5CU1FU0lBolW3V2BMIO6COON
+#                       QarCBmzoMRetBJAa/o9KLbFiT5udaKwgXanE9ce9CLgFIz6zfwZ9hn5tWQ2iQYWc
+#                       Y8NnIE6dhCLWnJ/dS2T9yfqggmc1TwMvBY8YlhWbrrrupTlAUpDlLRENRddQadny
+#                       LH3qp2IuP3m8qX3mQCNUzujsqqozP10iWtEaWEAYAW/SWu/FuQMJZzFXAvySU7ob
+#                       sXLXUYVLprveCW2YodW/M1ivDvAG6eV0ejpsRTLW/JZk6OqDAQKCAQEA1hdOmuYb
+#                       noEZxWbAXgwMmIwWw0QwYr71jJJujc8UEMgC/N9ecOmqmicBnz00Hj7TQ1Sk9e2h
+#                       PE1uPbdvdTu8mpgjTVuZPim6b/4xqWs/Crp1PoPEGCJ1q7vMIF/WYoHfkVmbaFzr
+#                       ZCudQW2F8LBwmu2DNo4OtcPQUkyEk+5IuFiRLLl+/1FEti5OROJmn9L+1zj5gG8p
+#                       mvQIZea8VIx0Zy78IMIUG5lDBykGbrD3+lu1xa6bM3VrZplTcOIZwHRBHQHImYsk
+#                       pGGTgX6kR0HQZPoApgZwDu8GA+A12KIW+NDS2m/qutqeQ5K6tl0RIKcOLP91+exo
+#                       QOJLi7af6oYKqQKCAQEAy83qjEk7FWzfSfnLgzvJ8vmEishRzryBICX0fNwUJtLZ
+#                       VvRIve9fy95KBpVNh1m/Q6jyznWlYP8qccvQkINGKYfYx+TVsofqudREkgq4Povo
+#                       FzZluFoDMcWT84EzblUYmuxB+h9UQzZrqQNXzlOUDKAymArMJaZh7V0SteqBxsMc
+#                       T7qTuvrjt3/FE8jGJlKTleLSBZX+fZ7aWooROOAt/cst5XpbevkxHsLKp4ZmA3vo
+#                       cz0cZ+ZNVkzzWC2a8TgWzaCp3X0uU8V2gCCZfhd5TNj5bCc7KcW4KndZiF3l/Iq9
+#                       XhJK1UQRROYZ8xQL7kujZAIqdoMrr15NVwiWMKuDeQKCAQEAuk6+EP5+uokOrEKm
+#                       1TEXJQmEJZmJoeUcOqCTpMS4aYIlV3nq7cfqtwuK1dClMkzp/IYEqB+LWLbpYLvp
+#                       OtQpZT9QOVmlGfumSx+iiBTUX7mznht84qPaUwCyutmr7z2mGQ8ptsBl+F4cE3wE
+#                       O1jQJYLb1PX6xyMIfxYnqbSLhCFO9OTYJ8fJS+EwK7H6LMupChKCzcnvIvGK/WK2
+#                       Mb2o7sJslvVOGlZdhjWla16F7lEw9j7kwPtF45s6idm5H0oL//o1X6k+0e44N1DG
+#                       FVyoxbbqKZEgo15OlcDgGw2zgAP5+i26z7DAWX2vDlQfO5MlOvN073FTqGNF6uea
+#                       crUDQQKCAQAhLMe9Rj5j4nEGba7/EcBx2MQGg00txemO/h6qJHjzSOcwDFu67zg8
+#                       y1Zpc+xG2AkWTm4XxXbCL0cNdwvgOj41jHNxNoLCqPVAgpkW3L/ZDpUdEjHErIJQ
+#                       m8TVonZow1lZ/pNOz8K7niQwQucMIva6h2k07q0Eg+z04m2lRyMQ47m8ELbzfNuM
+#                       hzPhYJFAs7hqcZ2WYzAl6rHIgykChRt3cJdr/1rczat9QmASnQIGFyljeNMi5o44
+#                       OhZyiBnsoiC0IC8GatYbtMzxVl0l9VQ9eiQ/wrMSvaiY4Qyl8gL59OuWYIvl40qc
+#                       WIho1R6MD6vtH50h5YA677LPNAqeqYyhAoIBAQDKF4ZcF/zjkT0zTRC1HtgF+SC5
+#                       LT6becMn431PyClp78jRdEv/JKBP3ltcnnd5wY/MHHXELX4VFsTxzjOFGmAq1zxj
+#                       5BvA8CqvlEr1VKJGaxPaOv9uXQ9NPGfsEkZrBiicbIXZ5dnxzcMPsD4RHmoa5rjJ
+#                       ghacCyPz2X0bB3YherFJXPs3ZM9xJwmN5I1w81W5tc2pG8zhznQOnNK1Cl2t9/vp
+#                       8R0mHeFKRyHmUSol8MdbOxyDdnL5QxmHu6v/JWsLLI9Pf5lQ5VaoFZSMdtqXEMs6
+#                       rmKKmYT26txEYsjau7rE0uu91vJOLdR1TEQbwZ3L6NtVcuTOgix30Bl2J/Xp
+#                       -----END RSA PRIVATE KEY-----

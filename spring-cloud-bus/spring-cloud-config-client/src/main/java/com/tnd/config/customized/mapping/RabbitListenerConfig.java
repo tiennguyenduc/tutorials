@@ -1,4 +1,4 @@
-package com.tnd.config;
+package com.tnd.config.customized.mapping;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListenerConfigurer;
 import org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistrar;

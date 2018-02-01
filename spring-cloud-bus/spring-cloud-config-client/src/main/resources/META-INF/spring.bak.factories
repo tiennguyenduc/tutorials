@@ -1,1 +1,1 @@
-org.springframework.cloud.bootstrap.BootstrapConfiguration = com.tnd.config.ConfigSourceLocator
+org.springframework.cloud.bootstrap.BootstrapConfiguration = com.tnd.config.customized.mapping.ConfigSourceLocator
