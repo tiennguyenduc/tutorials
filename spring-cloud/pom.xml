@@ -21,6 +21,7 @@
     <module>auth-server</module>
     <module>account-service</module>
     <module>customer-service</module>
+    <module>auth-jwt</module>
   </modules>
 
 </project>

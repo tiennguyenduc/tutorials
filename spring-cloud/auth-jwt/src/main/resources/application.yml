@@ -1,0 +1,8 @@
+security:
+  oauth2:
+    resource:
+      id: auth-server
+  jwt:
+    signing-key: signing-key
+    access-token-validity-period: 3600
+    refresh-token-validity-period: 86400
