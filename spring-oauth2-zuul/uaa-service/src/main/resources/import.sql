@@ -1,0 +1,1 @@
+insert into `USER`(ID, PASSWORD, USERNAME, account_non_expired, account_non_locked, credentials_non_expired, enabled) values(1, '$2a$10$bnC26zz//2cavYoSCrlHdecWF8tkGfPodlHcYwlACBBwJvcEf0p2G', 'test1234', 1, 1, 1, 1);
