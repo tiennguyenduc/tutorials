@@ -11,8 +11,8 @@
 
 	<parent>
 		<groupId>com.tnd</groupId>
-		<artifactId>spring-cloud</artifactId>
-		<version>${package.version}</version>
+		<artifactId>spring-oauth2-zuul</artifactId>
+		<version>0.0.1</version>
 	</parent>
 
 	<dependencies>
